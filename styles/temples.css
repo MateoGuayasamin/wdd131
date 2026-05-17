@@ -1,0 +1,138 @@
+/* Variables de Color y Tipografía */
+:root {
+    --primary-color: #4a148c; /* Morado oscuro */
+    --accent-color: #7b1fa2;  /* Morado claro para hover */
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --footer-bg: #310d61;
+    --title-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- HEADER & NAV (Móvil) --- */
+header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-container h1 {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+}
+
+/* Botón Hamburguesa */
+#menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Navegación móvil oculta por defecto */
+nav {
+    display: none; 
+    flex-direction: column;
+    background-color: var(--footer-bg);
+}
+
+/* Clase que JavaScript activará para mostrar el menú */
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+/* Efecto Hover en Enlaces */
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- MAIN & GALERÍA (Móvil: 1 columna) --- */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px; /* Limitamos el ancho máximo */
+    margin: 0 auto;    /* Centrado horizontal */
+    padding: 1.5rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: var(--title-font);
+}
+
+/* Galería con CSS Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+    gap: 1.5rem;
+}
+
+figure {
+    background: var(--bg-color);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 0.75rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--footer-bg);
+    color: #e0b0ff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.last-modified {
+    font-size: 0.8rem;
+    color: #cca3e6;
+    margin-top: 0.5rem;
+}

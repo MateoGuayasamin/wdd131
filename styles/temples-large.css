@@ -1,0 +1,36 @@
+/* --- CAMBIOS PARA ESCRITORIO / PANTALLAS GRANDES --- */
+
+/* Ocultar botón de hamburguesa */
+#menu-button {
+    display: none;
+}
+
+/* El header ahora distribuye el título y el menú de forma horizontal */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 100%;
+}
+
+.header-container {
+    padding: 1rem 0;
+}
+
+/* Mostrar menú horizontalmente con Flexbox */
+nav {
+    display: flex !important; /* Fuerza a mostrarse ignorando el toggle de JS */
+    flex-direction: row;
+    background-color: transparent;
+}
+
+nav a {
+    padding: 1.5rem 1rem;
+}
+
+/* Modificar la Grid a 3 columnas en pantallas grandes */
+.gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
