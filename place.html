@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Scotland | W03 Country Page</title>
+    <meta name="description" content="WDD 131 assignment page featuring data, weather, and highlights of Scotland.">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="js/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Scotland</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/hero-large.webp">
+                <img src="images/hero-small.webp" alt="Scenic view of the Scottish Highlands" loading="lazy">
+            </picture>
+        </div>
+
+        <section class="card data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Capital:</strong> Edinburgh</li>
+                <li><strong>Population:</strong> 5.4 Million</li>
+                <li><strong>Language:</strong> English, Gaelic, Scots</li>
+                <li><strong>Currency:</strong> British Pound (£)</li>
+                <li><strong>Area:</strong> 77,933 km²</li>
+            </ul>
+        </section>
+
+        <section class="card weather-card">
+            <h2 class="weather-heading">Weather</h2>
+            
+            <div class="weather-icon-mobile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48">
+                    <path d="M46 36a10 10 0 1 0-11.2-9.8 14 14 0 1 0-19.3 14.3A12 12 0 1 0 24 60h22a14 14 0 0 0 0-28zm-22 20a8 8 0 0 1-2.4-15.6l1.7-.5-.4-1.7A10 10 0 0 1 41.7 26l.4 1.7 1.7-.3A6 6 0 0 1 46 32a10 10 0 0 1 0 20H24z" fill="#555"/>
+                    <circle cx="44" cy="20" r="6" fill="#f39c12"/>
+                </svg>
+            </div>
+
+            <ul class="weather-info">
+                <li><strong>Temperature:</strong> <span id="temp">8</span>°C</li>
+                <li><strong>Conditions:</strong> Cloudy</li>
+                <li><strong>Wind:</strong> <span id="wind">15</span> km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Your Name | Scotland</p>
+        <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
