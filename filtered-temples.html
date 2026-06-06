@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album</title>
+    <meta name="description" content="Sitio personal de Mateo. Incluye recursos de desarrollo web, información sobre mi perfil profesional en Colombia y proyectos de programación con templos filtrados.">
+    <meta name="author" content="Mateo Guayasamin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css"> 
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Temple Album</h1>
+            <button id="menu-button" aria-label="Abrir menú">&#9776;</button>
+        </div>
+        <nav id="nav-menu">
+            <a href="#" id="nav-home" class="active">Home</a>
+            <a href="#" id="nav-old">Old</a>
+            <a href="#" id="nav-new">New</a>
+            <a href="#" id="nav-large">Large</a>
+            <a href="#" id="nav-small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="gallery-title">Home</h2>
+        <div class="gallery" id="gallery-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🌸 Mateo 🌸 Colombia</p>
+        <p class="last-modified">Last Modification: <span id="last-modified-date"></span></p>
+    </footer>
+
+</body>
+</html>
